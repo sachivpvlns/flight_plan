@@ -15,7 +15,8 @@ urlpatterns = [
     # User management
     path("users/", include("flight_plan.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    # Your stuff: custom urls includes go here
+    # Local App URLs
+    path("", include("flight_plan.planner.urls", namespace="planner")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
