@@ -1,0 +1,5 @@
+[run]
+include = flight_plan/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

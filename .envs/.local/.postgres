@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=flight_plan
+POSTGRES_USER=giCLXSaABTDkStYFFgToPqUjaHszciPr
+POSTGRES_PASSWORD=ZUdmTZkSgYxBxmArTPmjZ2oFzdr5y2CWx4IGHvwsJCHhhNsUJb7ZmqxqaSARGVXe
