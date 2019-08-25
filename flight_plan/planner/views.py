@@ -10,7 +10,7 @@ from .plan import Plan
 def lazy_jack(request):
     if request.method == 'POST':
         data = request.data
-        key = hash(frozenset(data))
+        key = hash(str(data))
 
         cache_data = cache.get(key)
         if cache_data is None:
@@ -19,6 +19,7 @@ def lazy_jack(request):
                             data['prefered_time'])
                 flight_plan = plan.get_flight_plan()
                 response = {"flight_plan": flight_plan}
+                # Keeping timeout low for easy testing
                 cache.set(key, response, timeout=25)
                 return Response(response)
         else:

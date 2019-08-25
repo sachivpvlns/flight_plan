@@ -117,7 +117,7 @@ class Plan:
                 'city': schedule['departure']['city'],
                 'timestamp': schedule['departure']['timestamp']
             })
-            if index == len(schedule) - 1:
+            if index == len(schedules) - 1:
                 flight_plan.append({
                     'city': schedule['arrival']['city'],
                     'timestamp': schedule['arrival']['timestamp']
