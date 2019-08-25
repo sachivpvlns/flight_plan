@@ -80,7 +80,7 @@ class Plan:
 
             next_destinations = {city: shortest_paths[city] for city in shortest_paths if city not in visited_cities}
             if not next_destinations:
-                return "Route not possible"
+                return []
             # next city is the destination with the lowest travel_time
             current_city = min(next_destinations, key=lambda k: next_destinations[k][1])
 
